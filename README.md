@@ -53,6 +53,7 @@ Returns time series sales data aggregated by time windows.
 
 **Example Requests:**
 
+```bash
 # Get monthly sales by user
 curl "http://localhost:3000/api/sales/timeseries?granularity=month&groupBy=user"
 
@@ -64,9 +65,11 @@ curl "http://localhost:3000/api/sales/timeseries?granularity=month&groupBy=group
 
 # Get daily sales for multiple users
 curl "http://localhost:3000/api/sales/timeseries?granularity=day&groupBy=user&userId=1,2,3"
+```
 
 **Response Format:**
 
+```json
 {
   "granularity": "month",
   "groupBy": "user",
@@ -92,6 +95,7 @@ curl "http://localhost:3000/api/sales/timeseries?granularity=day&groupBy=user&us
     }
   ]
 }
+```
 
 **Metrics Provided:**
 - `saleCount`: Number of sales in the time window
@@ -102,8 +106,10 @@ curl "http://localhost:3000/api/sales/timeseries?granularity=day&groupBy=user&us
 
 ## Running Tests
 
+```bash
 npm test                # Run all tests
 npm run test:coverage   # Run tests with coverage report
+```
 
 ## Help
 
