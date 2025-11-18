@@ -1,0 +1,30 @@
+{
+  "name": "actifai-engineering-takehome-app",
+  "version": "1.0.0",
+  "description": "Node server for the Actifai Engineering takehome test.",
+  "author": "Actifai Engineering",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
+  },
+  "dependencies": {
+    "express": "4.16.1",
+    "pg": "8.7.1"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "supertest": "^6.3.3"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "testMatch": [
+      "**/tests/**/*.test.js"
+    ],
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ]
+  }
+}
